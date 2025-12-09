@@ -1,5 +1,5 @@
 {
-  "name": "@node-saml/node-saml",
+  "name": "@xevolab/node-saml",
   "version": "5.1.0",
   "description": "SAML 2.0 implementation for Node.js",
   "keywords": [
@@ -10,7 +10,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/node-saml/node-saml.git"
+    "url": "https://github.com/xevolab/node-saml.git"
   },
   "license": "MIT",
   "author": {
