@@ -2,13 +2,13 @@ This is a fork of the [node-saml package](https://github.com/node-saml/node-saml
 
 # What was changed?
 
-** Metadata **
+**Metadata**
 
 - Added the ability to include one or many `<AttributeConsumingService>` elements in the metadata
 - Changed the default `<AssertionConsumerService>` index to 0 instead of 1
 - Fixed an issue that didn't allow for the `<KeyInfo>` element to be included in the `<Signature>` element of the metadata
 
-** AuthnRequest **
+**AuthnRequest**
 
 - Removed `AllowCreate` attribute if set to `false`
 - Modified the `<saml:Issuer>` object by:
