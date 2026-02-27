@@ -211,7 +211,6 @@ class SAML {
 				"@ID": id,
 				"@Version": "2.0",
 				"@IssueInstant": instant,
-				"@ProtocolBinding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST",
 				"@Destination": this.options.entryPoint,
 				"saml:Issuer": {
 					"@xmlns:saml": "urn:oasis:names:tc:SAML:2.0:assertion",
@@ -227,7 +226,10 @@ class SAML {
 		if (this.options.forceAuthn === true) request["samlp:AuthnRequest"]["@ForceAuthn"] = true;
 
 
-		if (!this.options.disableRequestAcsUrl) request["samlp:AuthnRequest"]["@AssertionConsumerServiceURL"] = this.options.callbackUrl;
+		if (!this.options.disableRequestAcsUrl) {
+			request["samlp:AuthnRequest"]["@AssertionConsumerServiceURL"] = this.options.callbackUrl;
+			request["samlp:AuthnRequest"]["@ProtocolBinding"] = "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST";
+		}
 		if (this.options.assertionConsumerServiceIndex) request["samlp:AuthnRequest"]["@AssertionConsumerServiceIndex"] = this.options.assertionConsumerServiceIndex;
 
 		const { samlAuthnRequestExtensions } = this.options;
