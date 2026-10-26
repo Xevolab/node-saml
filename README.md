@@ -1,12 +1,12 @@
-# Xevolab Node SAML
-
-A fork of the [node-saml package](https://github.com/node-saml/node-saml) with Xevolab-specific SAML customizations.
+# Node SAML
 
 [![Build Status](https://github.com/node-saml/node-saml/actions/workflows/workflow.yml/badge.svg?branch=master)](https://github.com/node-saml/node-saml/actions/workflows/workflow.yml)
-[![npm version](https://badge.fury.io/js/@xevolab%2Fnode-saml.svg)](https://badge.fury.io/js/@xevolab/node-saml)
+[![npm version](https://badge.fury.io/js/@node-saml%2Fnode-saml.svg)](https://badge.fury.io/js/@node-saml%2Fnode-saml)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![codecov](https://codecov.io/gh/node-saml/node-saml/branch/master/graph/badge.svg?token=PQWCMBWBFB)](https://codecov.io/gh/node-saml/node-saml)
 [![DeepScan grade](https://deepscan.io/api/teams/17569/projects/20921/branches/586237/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=17569&pid=20921&bid=586237)
+
+[![NPM](https://nodei.co/npm/@node-saml/node-saml.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/@node-saml/node-saml)
 
 A [SAML 2.0](https://en.wikipedia.org/wiki/SAML_2.0) implementation for Node.js. It acts as the
 service provider (SP) half of a SAML exchange: it builds the `AuthnRequest` and logout messages you
@@ -36,6 +36,8 @@ library in a Passport strategy.
 - [Node support policy](#node-support-policy)
 - [Contributing](#contributing)
 - [Changelog](#changelog)
+
+## Sponsors
 
 We gratefully acknowledge support from our sponsors:
 
@@ -1209,9 +1211,3 @@ When a change follows the SAML specification, link the relevant part. Start from
 ## Changelog
 
 See [CHANGELOG.md](https://github.com/node-saml/node-saml/blob/master/CHANGELOG.md).
-
-## Xevolab customizations
-
-- Supports one or more `<AttributeConsumingService>` elements in service-provider metadata and defaults the `<AssertionConsumerService>` index to 0.
-- Omits `AllowCreate` when it is `false` and sets the AuthnRequest issuer `Format` and callback URL `NameQualifier`.
-- Exposes the generated AuthnRequest and URL through the authorize-message APIs for application logging.
